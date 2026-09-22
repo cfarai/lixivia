@@ -16,19 +16,13 @@ export const Route = createFileRoute("/shows")({
 });
 
 const upcoming = [
-  { date: "MAR 14", city: "Berlin, DE", venue: "Urban Spree", status: "On Sale" },
-  { date: "MAR 16", city: "Prague, CZ", venue: "Modrá Vopice", status: "On Sale" },
-  { date: "MAR 18", city: "Vienna, AT", venue: "Arena", status: "Few Left" },
-  { date: "MAR 21", city: "Milan, IT", venue: "Legend Club", status: "On Sale" },
-  { date: "MAR 24", city: "Barcelona, ES", venue: "Sala Upload", status: "Sold Out" },
-  { date: "MAR 28", city: "London, UK", venue: "The Underworld", status: "On Sale" },
+  // { date: "SEP 19", city: "Casablanca, MA", venue: "Urban Spree", status: "On Sale" },
+  // { date: "JUNE 05", city: "Rabat, MA", venue: "Modrá Vopice", status: "On Sale" },
 ];
 
 const past = [
-  { date: "NOV 2024", city: "Amsterdam, NL", venue: "Melkweg" },
-  { date: "OCT 2024", city: "Paris, FR", venue: "Le Klub" },
-  { date: "OCT 2024", city: "Brussels, BE", venue: "Magasin 4" },
-  { date: "SEP 2024", city: "Copenhagen, DK", venue: "Pumpehuset" },
+  { date: "SEP 19 2026", city: "Casablanca, MA", venue: "L'boulevard" },
+  { date: "JUNE 05 2026", city: "Rabat, MA", venue: "La renaissance" },
 ];
 
 function Shows() {
@@ -49,7 +43,12 @@ function Shows() {
           </div>
 
           <div className="mt-10 border-y border-border divide-y divide-border">
-            {upcoming.map((s) => (
+            {upcoming.length === 0 ? (
+              <div className="py-16 text-center text-muted-foreground font-mono text-sm tracking-widest">
+                No upcoming shows scheduled at this time.
+              </div>
+            ) : (
+            upcoming.map((s) => (
               <div
                 key={s.date + s.city}
                 className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-[120px_1fr_1fr_auto] items-center gap-4 py-5 px-2 hover:bg-secondary/40 transition-colors group"
@@ -80,12 +79,13 @@ function Shows() {
                   <span className="sm:hidden">{s.status === "Sold Out" ? "OUT" : "GO"}</span>
                 </a>
               </div>
-            ))}
+            ))
+          )}
           </div>
         </div>
       </section>
 
-      {/* Map placeholder */}
+      {/* Map placeholder
       <section className="border-b border-border py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl sm:text-5xl">Tour Map</h2>
@@ -100,7 +100,7 @@ function Shows() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Past */}
       <section className="border-b border-border py-16">
