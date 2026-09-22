@@ -18,8 +18,8 @@ export const Route = createFileRoute("/music")({
 });
 
 const releases = [
-  { title: "No Chains Left (Demo)", year: "2025", type: "Demo", tracks: 1 },
-  { title: "ScreenFall (Demo)", year: "2025", type: "Single", tracks: 1 },
+  { title: "No Chains Left (Demo)", year: "2026", type: "Demo", tracks: 1 },
+  { title: "ScreenFall (Demo)", year: "2026", type: "Single", tracks: 1 },
 ];
 
 const songs = [
@@ -56,7 +56,7 @@ function Music() {
             </div>
             <div>
               <div className="text-xs font-mono tracking-[0.3em] text-primary uppercase">
-                Latest Release · Demo
+                Latest Release · 2026
               </div>
               <h2 className="mt-3 font-display text-5xl sm:text-6xl leading-[0.9]">No Chains Left</h2>
               <p className="mt-4 text-muted-foreground text-lg max-w-lg">
@@ -85,7 +85,7 @@ function Music() {
                 <SpotifyEmbed
                   src={songs[0].embed}
                   title={songs[0].title}
-                  height={152}
+                  height={90}
                 />
               </div>
             </div>
@@ -111,7 +111,7 @@ function Music() {
                     Open in Spotify <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
-                <SpotifyEmbed src={s.embed} title={s.title} height={152} />
+                <SpotifyEmbed src={s.embed} title={s.title} height={90} />
               </div>
             ))}
           </div>

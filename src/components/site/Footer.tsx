@@ -37,6 +37,7 @@ export function Footer() {
           {Array.from({ length: 8 }).map((_, i) => (
             <span key={i} className="mx-8 flex items-center gap-8">
               TOXIC &amp; REAL <span className="text-primary toxic-glow">☣</span>
+              TOXIC &amp; REAL <span className="text-primary toxic-glow">☣</span>
             </span>
           ))}
         </div>
