@@ -3,7 +3,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { SpotifyEmbed } from "@/components/site/SpotifyEmbed";
 import { ExternalLink } from "lucide-react";
 import music from "@/assets/music.jpg";
-import store from "@/assets/store.jpg";
+import song1 from "@/assets/single1.jpg";
+import song2 from "@/assets/single2.jpg";
 
 export const Route = createFileRoute("/music")({
   head: () => ({
@@ -51,7 +52,7 @@ function Music() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] items-center">
             <div className="aspect-square bg-secondary relative overflow-hidden group">
-              <img src={store} alt="No Chains Left cover" className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+              <img src={song2} alt="No Chains Left cover" className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent mix-blend-overlay" />
             </div>
             <div>
@@ -127,7 +128,7 @@ function Music() {
               <article key={r.title} className="group border border-border hover:border-primary transition-colors">
                 <div className="aspect-square bg-secondary relative overflow-hidden">
                   <img
-                    src={i % 2 ? music : store}
+                    src={i % 2 ? song2 : song1}
                     alt={r.title}
                     loading="lazy"
                     className="h-full w-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"

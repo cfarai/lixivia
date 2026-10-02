@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import heroLogo from "@/assets/lixivia-hero-logo.jpg.asset.json";
+// import heroLogo from "@/assets/lixivia-hero-logo.jpg.asset.json";
+import heroLogo from "@/assets/music.jpg.asset.json";
 import band from "@/assets/band.jpg";
 import music from "@/assets/music.jpg";
 import shows from "@/assets/shows.jpg";
