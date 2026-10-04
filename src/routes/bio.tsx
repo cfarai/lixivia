@@ -2,6 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
 import band from "@/assets/band.jpg";
 import store from "@/assets/store.jpg";
+import samuel from "@/assets/samuel.jpg";
+import ayoub from "@/assets/ayoub.jpg";
+import hamza from "@/assets/hamza.jpg";
+import hisham from "@/assets/hisham.jpg";
+import houssam from "@/assets/houssam.jpg";
 
 export const Route = createFileRoute("/bio")({
   head: () => ({
@@ -16,11 +21,11 @@ export const Route = createFileRoute("/bio")({
 });
 
 const members = [
-  { name: "Samuel", role: "Vocals", image: band },
-  { name: "Ayoub", role: "Guitar", image: store },
-  { name: "Hisham", role: "Bass", image: band },
-  { name: "Hamza", role: "Drums", image: store },
-  { name: "Houssam", role: "Lead guitar", image: band },
+  { name: "Samuel", role: "Vocals", image: samuel },
+  { name: "Ayoub", role: "Guitar", image: ayoub },
+  { name: "Hisham", role: "Bass", image: hisham },
+  { name: "Hamza", role: "Drums", image: hamza},
+  { name: "Houssam", role: "Lead guitar", image: houssam},
 ];
 
 const timeline = [
