@@ -164,7 +164,7 @@ function Index() {
                   <div className="absolute -top-3 -left-3 z-10 px-2 py-1 bg-primary text-primary-foreground text-[10px] font-mono tracking-widest uppercase toxic-box-glow rotate-[-6deg] group-hover:rotate-0 transition-transform">
                     ☣ {s.label}
                   </div>
-                  <div className="relative aspect-[4/5] overflow-hidden bg-secondary border border-border group-hover:border-primary/50 transition-colors">
+                  <div className="relative aspect-[9/6] overflow-hidden bg-secondary border border-border group-hover:border-primary/50 transition-colors">
                     <img
                       src={s.image}
                       alt={s.title}

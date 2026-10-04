@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
-import band from "@/assets/band.jpg";
-import store from "@/assets/store.jpg";
+import band from "@/assets/band2.jpg";
 import samuel from "@/assets/samuel.jpg";
 import ayoub from "@/assets/ayoub.jpg";
 import hamza from "@/assets/hamza.jpg";
@@ -95,12 +94,12 @@ function Bio() {
 
       {/* Members */}
       <section className="border-t border-border py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <h2 className="font-display text-4xl sm:text-5xl">The Members</h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 ">
             {members.map((m, i) => (
               <div key={m.name} className="group border border-border">
-                <div className="aspect-[3/4] bg-secondary overflow-hidden relative">
+                <div className="aspect-[7/6] bg-secondary overflow-hidden relative">
                   <img
                     src={m.image}
                     alt={m.name}
