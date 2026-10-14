@@ -8,7 +8,7 @@ import music from "@/assets/single2.jpg";
 import shows from "@/assets/shows.jpg";
 import store from "@/assets/store.jpg";
 import press from "@/assets/press.jpg";
-import gallery from "@/assets/gallery.jpg";
+import gallery from "@/assets/gallerymain.jpg";
 import contact from "@/assets/contact.jpg";
 
 export const Route = createFileRoute("/")({

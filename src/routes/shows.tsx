@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
 import { MapPin, Ticket } from "lucide-react";
-import shows from "@/assets/shows.jpg";
+import shows from "@/assets/tricintyshow.jpeg";
+import shows2 from "@/assets/tricintyshow2.jpeg";
 
 export const Route = createFileRoute("/shows")({
   head: () => ({
@@ -22,6 +23,7 @@ const upcoming = [
 
 const past = [
   { date: "SEP 19 2026", city: "Casablanca, MA", venue: "L'boulevard" },
+  { date: "SEP 19 2026", city: "Casablanca, MA", venue: "L'Uzine" },
   { date: "JUNE 05 2026", city: "Rabat, MA", venue: "La renaissance" },
 ];
 
@@ -85,24 +87,8 @@ function Shows() {
         </div>
       </section>
 
-      {/* Map placeholder
-      <section className="border-b border-border py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-4xl sm:text-5xl">Tour Map</h2>
-          <div className="mt-6 aspect-[16/9] border border-border bg-secondary/40 relative overflow-hidden flex items-center justify-center">
-            <div className="absolute inset-0 slash-divider opacity-10" />
-            <div className="relative text-center">
-              <MapPin className="h-12 w-12 mx-auto text-primary" />
-              <div className="mt-3 font-display text-xl tracking-widest">Embedded Map</div>
-              <div className="text-xs font-mono text-muted-foreground tracking-widest mt-1">
-                REPLACE WITH GOOGLE / MAPBOX EMBED
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Past */}
+      {/* Past*/}
+      
       <section className="border-b border-border py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl sm:text-5xl">Past Dates</h2>
@@ -114,6 +100,21 @@ function Shows() {
                   <div className="text-xs text-muted-foreground">{s.venue}</div>
                 </div>
                 <div className="text-xs font-mono tracking-widest text-muted-foreground">{s.date}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/*Posters*/}
+      <section className="border-b border-border py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-4xl sm:text-5xl">Past Shows</h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[shows, shows2 ].map((src, i) => (
+              <div key={i} className="aspect-[4/5] bg-secondary overflow-hidden group relative">
+                <img src={src} alt="" loading="lazy" className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                <a href="#" className="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                </a>
               </div>
             ))}
           </div>

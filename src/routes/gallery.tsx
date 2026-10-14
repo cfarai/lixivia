@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { X } from "lucide-react";
 import { PageHeader } from "@/components/site/PageHeader";
-import gallery from "@/assets/gallery.jpg";
+import gallery from "@/assets/gallerymain.jpg";
 import band from "@/assets/band.jpg";
 import hero from "@/assets/LIXIVIA_TRICINTY-29.jpg";
 import shows from "@/assets/LIXIVIA_TRICINTY-66.jpg";
