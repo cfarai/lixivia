@@ -35,79 +35,8 @@ function Press() {
       <PageHeader eyebrow="Press & Media" title="Press" image={press}>
         The clippings, the interviews, and everything you need to write about the band.
       </PageHeader>
-
-      {/* Press kit */}
-      <section className="border-b border-border py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-[1fr_2fr] items-center border border-border p-8 bg-secondary/30">
-            <div>
-              <div className="text-xs font-mono tracking-widest text-primary uppercase">EPK</div>
-              <h2 className="mt-2 font-display text-4xl">Press Kit</h2>
-              <p className="mt-3 text-muted-foreground">
-                High-res photos, band bio, logos, and stage plot. Everything you need in one .zip.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              {["Photos (.zip)", "Logos (.svg)", "Bio (.pdf)", "Stage Plot"].map((f) => (
-                <a
-                  key={f}
-                  href="#"
-                  className="inline-flex items-center gap-2 border border-bone px-5 py-3 text-xs font-display tracking-widest hover:bg-bone hover:text-ink transition-colors"
-                >
-                  <Download className="h-3 w-3" />
-                  {f}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews */}
-      <section className="border-b border-border py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-4xl sm:text-5xl">Reviews</h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {reviews.map((r) => (
-              <blockquote key={r.source} className="border border-border p-6 relative">
-                <Quote className="absolute top-4 right-4 h-6 w-6 text-primary/40" />
-                <p className="text-lg font-display leading-tight pr-8">"{r.quote}"</p>
-                <footer className="mt-4 flex items-center justify-between">
-                  <cite className="not-italic text-sm text-muted-foreground">— {r.source}</cite>
-                  <span className="text-xs font-mono text-primary tracking-widest">{r.rating}</span>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Interviews */}
-      <section className="border-b border-border py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-4xl sm:text-5xl">Interviews</h2>
-          <div className="mt-8 divide-y divide-border border-y border-border">
-            {interviews.map((it, i) => (
-              <a
-                key={it.title}
-                href="#"
-                className="grid grid-cols-[auto_1fr_auto] items-center gap-4 py-4 px-2 hover:bg-secondary/40 transition-colors group"
-              >
-                <div className="text-primary font-mono text-sm">/0{i + 1}</div>
-                <div className="min-w-0">
-                  <div className="font-display text-xl truncate group-hover:text-primary transition-colors">
-                    {it.title}
-                  </div>
-                  <div className="text-xs text-muted-foreground">{it.source}</div>
-                </div>
-                <div className="text-xs font-mono tracking-widest text-muted-foreground">{it.date}</div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Promo photos */}
+      
+      {/* Promo photos */} {/* repace with pic from interiews*/}
       <section className="border-b border-border py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl sm:text-5xl">Promotional Photos</h2>
