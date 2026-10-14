@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
 import { SpotifyEmbed } from "@/components/site/SpotifyEmbed";
 import { ExternalLink } from "lucide-react";
-import music from "@/assets/music.jpg";
+import music from "@/assets/single2.jpg";
 import song1 from "@/assets/single1.jpg";
 import song2 from "@/assets/single2.jpg";
 
