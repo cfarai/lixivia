@@ -28,10 +28,9 @@ const members = [
 ];
 
 const timeline = [
-  { year: "2024", event: "Founded by two members: Hisham on bass and Ayoub on guitar." },
-  { year: "2024", event: "New members joined: Houssam on lead guitar, Samuel on vocals and Hamza on drums" },
   { year: "2026", event: "First concert at Tricinty fest." },
-  { year: "2026", event: "Second concert at l'boulevard Tremplin. " },
+  { year: "2026", event: "Second concert at L'Uzine." },
+  { year: "2026", event: "First prize winner of the L'Boulevard 2026 Tremplin competition. " },
 ];
 
 function Bio() {
@@ -99,7 +98,7 @@ function Bio() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 ">
             {members.map((m, i) => (
               <div key={m.name} className="group border border-border">
-                <div className="aspect-[7/6] bg-secondary overflow-hidden relative">
+                <div className="aspect-[3/2] bg-secondary overflow-hidden relative">
                   <img
                     src={m.image}
                     alt={m.name}

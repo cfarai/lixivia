@@ -7,9 +7,9 @@ import band from "@/assets/band.jpg";
 import music from "@/assets/single2.jpg";
 import shows from "@/assets/shows.jpg";
 import store from "@/assets/store.jpg";
-import press from "@/assets/press.jpg";
+import press from "@/assets/blabla.png";
 import gallery from "@/assets/gallerymain.jpg";
-import contact from "@/assets/contact.jpg";
+import contact from "@/assets/lixivia-hero-logo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -76,7 +76,7 @@ const sections = [
   {
     to: "/contact",
     label: "Contact",
-    title: "Booking & Everything Else",
+    title: "Contact",
     body: "For booking, press, licensing, or just to say what's up. We answer everything eventually.",
     image: contact,
   },

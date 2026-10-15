@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Mail, MapPin, Instagram, Youtube, Facebook } from "lucide-react";
 import { SpotifyIcon } from "@/components/site/Footer";
-import contact from "@/assets/contact.jpg";
+import contact from "@/assets/band.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -117,43 +117,6 @@ function Contact() {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="border-b border-border py-16 bg-secondary/30">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-xs font-mono tracking-[0.3em] text-primary uppercase">Newsletter</div>
-          <h2 className="mt-3 font-display text-4xl sm:text-5xl">Enlist In The Ranks</h2>
-          <p className="mt-4 text-muted-foreground">
-            Tour announcements, new releases, and one-off merch drops. No spam, no filler.
-          </p>
-          <form
-            onSubmit={(e) => { e.preventDefault(); alert("Subscribed (placeholder)"); }}
-            className="mt-8 flex flex-col sm:flex-row gap-2 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              required
-              placeholder="your@email.com"
-              className="flex-1 bg-transparent border border-border focus:border-primary outline-none px-4 py-3 text-sm font-mono transition-colors"
-            />
-            <button className="bg-primary text-primary-foreground px-6 py-3 font-display tracking-widest text-sm hover:opacity-90 transition-opacity">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
-
-      {/* Map */}
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="aspect-[16/6] border border-border bg-secondary/40 relative overflow-hidden flex items-center justify-center">
-            <div className="absolute inset-0 slash-divider opacity-10" />
-            <div className="relative text-center">
-              <MapPin className="h-10 w-10 mx-auto text-primary" />
-              <div className="mt-2 font-display text-lg tracking-widest">Embedded Map Placeholder</div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

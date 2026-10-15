@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
 import { MapPin, Ticket } from "lucide-react";
-import shows from "@/assets/tricintyshow.jpeg";
-import shows2 from "@/assets/tricintyshow2.jpeg";
+import shows from "@/assets/shows.jpg";
+import tricinty from "@/assets/tricintyshow.jpeg";
+import uzine from "@/assets/uzine.jpg";
+import boulevard from "@/assets/boulevard.jpeg";
 
 export const Route = createFileRoute("/shows")({
   head: () => ({
@@ -21,9 +23,11 @@ const upcoming = [
   // { date: "JUNE 05", city: "Rabat, MA", venue: "Modrá Vopice", status: "On Sale" },
 ];
 
+const images = [boulevard, uzine, tricinty];
+
 const past = [
   { date: "SEP 19 2026", city: "Casablanca, MA", venue: "L'boulevard" },
-  { date: "SEP 19 2026", city: "Casablanca, MA", venue: "L'Uzine" },
+  { date: "JULY 24 2026", city: "Casablanca, MA", venue: "L'Uzine" },
   { date: "JUNE 05 2026", city: "Rabat, MA", venue: "La renaissance" },
 ];
 
@@ -87,35 +91,34 @@ function Shows() {
         </div>
       </section>
 
-      {/* Past*/}
-      
-      <section className="border-b border-border py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-4xl sm:text-5xl">Past Dates</h2>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {past.map((s) => (
-              <div key={s.date + s.city} className="flex items-baseline justify-between border-b border-border/60 py-3">
-                <div>
-                  <div className="font-display text-lg">{s.city}</div>
-                  <div className="text-xs text-muted-foreground">{s.venue}</div>
-                </div>
-                <div className="text-xs font-mono tracking-widest text-muted-foreground">{s.date}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/*Posters*/}
+      {/*Past*/}
       <section className="border-b border-border py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl sm:text-5xl">Past Shows</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[shows, shows2 ].map((src, i) => (
-              <div key={i} className="aspect-[4/5] bg-secondary overflow-hidden group relative">
-                <img src={src} alt="" loading="lazy" className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                <a href="#" className="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                </a>
-              </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {past.map((r, i) => (
+              <article key={r.city} className="group border border-border hover:border-primary transition-colors">
+                <div className="aspect-[5/4] aspect-square bg-secondary relative overflow-hidden">
+                  <img
+                    src={images[i % images.length]}
+                    alt={r.city}
+                    loading="lazy"
+                    className="h-full w-full object-covergrayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute top-3 left-3 text-xs font-mono tracking-widest bg-background/70 px-2 py-1">
+                    {r.venue}
+                  </div>
+                </div>
+                <div className="p-4 flex items-baseline justify-between gap-2">
+                  <div className="min-w-0">
+                    <div className="font-display text-xl truncate">{r.venue}</div>
+                    <div className="text-xs text-muted-foreground font-mono tracking-widest">
+                      {r.city}
+                    </div>
+                  </div>
+                  <div className="text-primary font-mono text-sm">{r.date}</div>
+                </div>
+              </article>
             ))}
           </div>
         </div>

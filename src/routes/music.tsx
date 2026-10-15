@@ -131,7 +131,7 @@ function Music() {
                     src={i % 2 ? song2 : song1}
                     alt={r.title}
                     loading="lazy"
-                    className="h-full w-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    className="h-full w-full object-cover group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute top-3 left-3 text-xs font-mono tracking-widest bg-background/70 px-2 py-1">
                     {r.type}

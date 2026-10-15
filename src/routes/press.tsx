@@ -1,12 +1,13 @@
-import { Download, Quote } from "lucide-react";
-import press from "@/assets/press.jpg";
-import band from "@/assets/band.jpg";
+
+import press from "@/assets/blabla.png";
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { PageHeader } from "@/components/site/PageHeader";
-import gallery from "@/assets/gallery.jpg";
-import shows from "@/assets/shows.jpg";
-import music from "@/assets/music.jpg";
+import deuxm from "@/assets/2m.png";
+import liik from "@/assets/liik.png";
+import diari from "@/assets/diari.jpg";
+import blabla from "@/assets/blabla.png";
+import riffwire from "@/assets/riffwire.jpg";
 
 export const Route = createFileRoute("/press")({
   head: () => ({
@@ -25,40 +26,49 @@ export const Route = createFileRoute("/press")({
 // Paste the real interview URLs in the `url` fields below.
 const features = [
   {
-    image: band,
-    outlet: "Decibel Magazine",
-    date: "Feb 2025",
-    title: "On writing the demos in a basement with no door",
-    blurb:
-      "A short conversation about tracking the demos in a shared rehearsal space, the amps that survived the sessions, and why nothing was fixed afterwards.",
-    url: "#",
+  image: liik,
+  outlet: "liiktv",
+  date: "Oct 2026",
+  title: "Au festival L'Boulevard, la scène métal marocaine impose sa voix et sa passion",
+  blurb:
+    "Longtemps marginalisé, le métal sous toutes ses déclinaisons trouve un terrain d'expression vibrant au Maroc. À Casablanca, le festival L'Boulevard continue de donner une voix aux jeunes formations locales, démontrant la vitalité et la cohésion d'une communauté soudée par l'amour d'une musique brute et authentique.",
+  url: "https://liik.tv/articles/au-festival-l-boulevard-la-scene-metal-marocaine-impose-sa-voix-et-sa-passion/",
   },
   {
-    image: shows,
-    outlet: "No Echo",
-    date: "Nov 2024",
-    title: "The underground now: five bands from the circuit",
-    blurb:
-      "A round-up feature on the venues keeping the scene alive, with a few paragraphs on how the band books its own tours and builds its own flyers.",
-    url: "#",
+  image: diari,
+  outlet: "diariodeunmetalhead",
+  date: "Oct 2026",
+  title: "L'BOULEVARD: from the revolution born in a courtroom, to the most important festival in Africa.",
+  blurb:
+    "Lixivia started off by completely shattering all our expectations. You find a band of incredibly young guys, each dressed in their own unique style: a rhythm guitarist in white, a singer with a typical old-school thrash metal look, a bassist in a classic sleeveless jacket covered in patches and Crisix-style shorts, and a lead guitarist wearing a Dream Theater t-shirt.",
+  url: "https://www.diariodeunmetalhead.com/2026/10/lboulevard-de-la-revolucion-nacida-en.html?utm_source=chatgpt.com",
   },
   {
-    image: music,
-    outlet: "Bandcamp Daily",
-    date: "Aug 2024",
-    title: "Tape runs, tour diaries and the value of a bad night",
+    image: deuxm,
+    outlet: "2M.ma",
+    date: "Sep 2026",
+    title: "L’Boulevard 2026 : 24 ans après, le festival casablancais continue de compter autrement",
     blurb:
-      "Notes from the road between two shows — the van, the merch table, and why the worst rooms taught the band more than the good ones.",
-    url: "#",
+      "L’Boulevard revient du 17 au 20 septembre 2026 au Stade du R.U.C à Casablanca, avec une programmation qui revendique une nouvelle fois la diversité des musiques actuelles et des cultures urbaines.",
+    url: "https://2m.ma/ar/news/L-Boulevard-2026-24-ans-apr%C3%A8s-le-festival-casablancais-continue-20260903",
   },
   {
-    image: gallery,
-    outlet: "Loud & Quiet",
-    date: "May 2024",
-    title: "Photographer's set: a night at the back of the room",
+  image: blabla,
+  outlet: "The Blabla project",
+  date: "Sep 2026",
+  title: "The Blabla project EP 04",
+  blurb:
+    "مشروع حواري راس مالو البلابلا، بتكلفة كبيرة ديال الهضرة وميزانية ضخمة ديال هاك وهارا. مشروع  هدفه:  يدوي على راسو... أحسن مشروع بدون دعم التنمية فقط الحب الشغف والقليل من الشبق ... لهلا يجعل مها فرجة ممتعة",
+  url: "https://youtu.be/3wlz4e9Co9c?t=3004",
+  },
+  {
+    image: riffwire,
+    outlet: "riffwire.mag",
+    date: "May 2026",
+    title: "Underground takes the first step at Tricinty Fest",
     blurb:
-      "A photo-led interview following the band through load-in, soundcheck and the encore, shot entirely from the back of the room.",
-    url: "#",
+      "Tricinty Fest is back, and if you still don’t have “June” circled on your calendar, it may be time to reconsider your priorities. The city’s flagship heavy music event is creeping closer, and this year’s edition marks a clear step up in both scale and intent.",
+    url: "https://www.instagram.com/p/DYaKz-1DBpV/?img_index=9",
   },
 ];
 
@@ -70,14 +80,14 @@ function Press() {
       </PageHeader>
 
       <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 sm:grid-cols-2">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f) => (
               <article
                 key={f.title}
                 className="group flex flex-col border border-border bg-secondary/70 overflow-hidden transition-colors hover:border-primary/60"
               >
-                <div className="aspect-[7/5] bg-background overflow-hidden">
+                <div className="aspect-[4/3] bg-background overflow-hidden">
                   <img
                     src={f.image}
                     alt={`${f.outlet} feature: ${f.title}`}
@@ -93,9 +103,9 @@ function Press() {
                     <span className="text-foreground/60">{f.date}</span>
                   </div>
 
-                  <h2 className="mt-3 font-display text-2xl leading-tight sm:text-3xl">{f.title}</h2>
+                  <h2 className="mt-3 font-display text-2xl leading-tight sm:text-xl leading-tight">{f.title}</h2>
 
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/75">{f.blurb}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/75 leading-tight">{f.blurb}</p>
 
                   <a
                     href={f.url}
